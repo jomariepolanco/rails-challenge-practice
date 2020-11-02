@@ -2,4 +2,5 @@
 
 <% @buildings.each do |building| %>
     <p><%= link_to building.name, building_path(building) %></p>
+    <p>Available Floors: <%= building.number_of_floors_available.join(', ') %></p>
 <% end %>

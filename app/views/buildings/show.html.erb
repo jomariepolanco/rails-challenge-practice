@@ -4,7 +4,13 @@
 
 <h4>Address: <%= @building.address %></h4>
 
-<h4>Rent Per Floor: <%= @building.rent_per_floor %></h4>
+<h4>Rent Per Floor: $<%= @building.rent_per_floor %></h4>
+<h5>Rent Making Per Month: $<%= @building.rent_per_floor * @building.companies.count %>
 
 <h4>Number of Floors: <%= @building.number_of_floors %></h4>
+
+<h4>Companies at <%= @building.name %>:</h4>
+<% @building.companies.distinct.each do |co| %>
+    <p><%= link_to co.name, company_path(co) %></p>
+<% end %>
 
