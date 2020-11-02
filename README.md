@@ -7,34 +7,46 @@ Here at WeWork™️, we have many buildings, and at every building, we have man
 To this end, the domain you will be building should look like the following:
 
 Building -< Office >- Company -< Employee
+<!-- Office
+- belongs to building
+- belongs to company -->
+<!-- Building
+- has many offices
+- has many companies through offices -->
+<!-- Company
+- has many offices
+- has many buildings through offices
+- has many employees -->
+<!-- Employee
+- belongs to company -->
 
 ### Schema
-
+<!-- 
 The schema should be as follows:
 
 Building:
 
-- name
-- country
-- address
-- rent_per_floor
-- number_of_floors
+- name:string
+- country:string
+- address:string
+- rent_per_floor:integer
+- number_of_floors:integer
 
 Office:
 
-- building
-- company
-- floor
+- building_id:int
+- company_id:int
+- floor:integer
 
 Company:
 
-- name
+- name:string
 
 Employee:
 
-- name
-- title
-- company
+- name:string
+- title:string
+- company_id:integer -->
 
 **For clarity, an office takes up an entire floor!**
 
