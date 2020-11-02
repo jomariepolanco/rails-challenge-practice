@@ -1,4 +1,9 @@
 <%= form_for @building do |f| %>
+    <% if flash[:building_errors] %>
+        <% flash[:building_errors].each do |error| %>
+            <p><%= error %></p>
+        <% end %>
+    <% end %>
 
     <%= f.label :name %><br>
     <%= f.text_field :name %><br>

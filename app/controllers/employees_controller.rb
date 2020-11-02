@@ -1,7 +1,7 @@
 class EmployeesController < ApplicationController
     before_action :find_employee, only: [:show, :edit, :update, :destroy]
     def index
-        @employee = Employee.all 
+        @employees = Employee.all 
         render :index 
     end
 

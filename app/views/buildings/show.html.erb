@@ -14,3 +14,8 @@
     <p><%= link_to co.name, company_path(co) %></p>
 <% end %>
 
+<h4>Employees in this Building:
+<%= @building.offices.sum do |office| %>
+    <% office.company.employees.count %>
+<% end %>
+</h4>

@@ -1,1 +1,19 @@
 <h1><%= @company.name %></h1>
+
+<h3>Offices: </h3>
+<% @company.offices.each do |office| %>
+    <p><%= office.floor %> floor at <%= link_to office.building.name, building_path(office.building) %></p>
+<% end %>
+
+<h3>Rent Per Month:</h3>
+<%= @company.buildings.sum do |build| %>
+    <% build.rent_per_floor %>
+<% end %>
+
+<h3>Employees: </h3>
+<% @company.employees.each do |emp| %>
+    <p><%= link_to emp.name, employee_path(emp) %>: <%= emp.title %></p>
+    <%= button_to "Delete Employee", employee_path, method: :delete %>
+<% end %>
+
+<%= render 'employees/form'%>

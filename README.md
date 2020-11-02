@@ -47,6 +47,7 @@ Employee:
 - name:string
 - title:string
 - company_id:integer -->
+- belongs to office 
 
 **For clarity, an office takes up an entire floor!**
 
@@ -65,30 +66,30 @@ The product team has deemed the following features as crucial:
 
 #### Company:
 
-- Users should be able to create a new company and choose any number of buildings to open an office in, as well as the floors that the company would like to purchase
-	- We have provided you with helper functions in the Building model to assist you in figuring out which offices are currently open, as well as the form itself. Spend some time looking over the code, but your main responsibility will be to handle the form's submission. 
-- Users should be able to see a show page for an individual company
- - On this page, a user should be able to see a list of all of its offices, as well as the building in which the office is located 
- - On this page, a user should be able to add an employee to the company 
- - On this page, a user should be able to see a list of all employees 
+<!-- - Users should be able to create a new company and choose any number of buildings to open an office in, as well as the floors that the company would like to purchase
+	- We have provided you with helper functions in the Building model to assist you in figuring out which offices are currently open, as well as the form itself. Spend some time looking over the code, but your main responsibility will be to handle the form's submission.  -->
+<!-- - Users should be able to see a show page for an individual company -->
+<!-- D - On this page, a user should be able to see a list of all of its offices, as well as the building in which the office is located  -->
+ <!-- - On this page, a user should be able to add an employee to the company  -->
+<!-- D - On this page, a user should be able to see a list of all employees  -->
  - On this page, a user should be able to remove an employee from the company 
- - On this page, a user should be able to see how much total rent it is paying
+ <!-- D- On this page, a user should be able to see how much total rent it is paying -->
 
 #### Validations:
 
-- Don't mess up our database! Make sure that every value is filled in! If a user fails to enter details, please ensure that you remind them of this failure!
-- Please ensure that a user's name is longer than 5 characters!
-- Please ensure that an office's floor is an integer!
+<!-- - Don't mess up our database! Make sure that every value is filled in! If a user fails to enter details, please ensure that you remind them of this failure! -->
+<!-- - Please ensure that a user's name is longer than 5 characters! -->
+<!-- - Please ensure that an office's floor is an integer! -->
 
 #### Bonus Deliverables:
 
 HR has deemed it legal for us to say that a BONUS will be available if you can accomplish any of the following:
 
-- Users should be able to see an office show page with the following: 
+<!-- - Users should be able to see an office show page with the following: 
 	- The building it is in 
 	- The company that is using it 
-	- The employees that are working in it
-- Users should be able to see the number of employees in a building on the building's show page
+	- The employees that are working in it -->
+<!-- - Users should be able to see the number of employees in a building on the building's show page -->
 
 **WARNING**
 

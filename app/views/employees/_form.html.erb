@@ -1,0 +1,17 @@
+<%= form_for :employee do |f| %>
+    <% if flash[:employee_errors] %>
+        <% flash[:employee_errors].each do |error| %>
+            <p><%= error %></p>
+        <% end %>
+    <% end %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+    
+    <%= f.label :title %><br>
+    <%= f.text_field :title %><br>
+
+    <%= f.label "Company" %><br>
+    <%= f.collection_select :company_id, Company.all, :id, :name %><br>
+
+    <%= f.submit %>
+<% end %>

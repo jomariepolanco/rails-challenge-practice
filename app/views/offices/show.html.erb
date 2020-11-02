@@ -1,0 +1,10 @@
+<h1>Office Page</h1>
+
+<h3>Building: <%= link_to @office.building.name, building_path(@office.building) %></h3>
+
+<h3>Company: <%= link_to @office.company.name, company_path(@office.company) %></h3>
+
+<h4>Employees: </h4>
+<% @office.company.employees.each do |emp| %>
+    <p><%= link_to emp.name, employee_path(emp) %></p>
+<% end %>
